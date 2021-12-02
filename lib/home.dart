@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hp_quizz/houses.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +46,14 @@ class Home extends StatelessWidget {
                           top: MediaQuery.of(context).size.height / 2.2),
                       width: MediaQuery.of(context).size.width / 2,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(builder: (BuildContext ctx) {
+                              return Houses();
+                            }));
+                          });
+                        },
                         style: ElevatedButton.styleFrom(
                           primary: Colors.amber,
                         ),
