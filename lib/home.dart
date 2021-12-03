@@ -18,14 +18,15 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/hogwarts4.jpg"),
+                image: AssetImage("assets/images/m_hog8.jpg"), //1 - 2 - 4 - 8
                 fit: BoxFit.cover)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                "Take the Quizz to know your house",
+                // "Take the Quizz to know your house",
+                "Discover your house",
                 style: TextStyle(
                   color: Colors.amber,
                   fontSize: 40,
@@ -38,13 +39,18 @@ class _HomeState extends State<Home> {
                   Container(
                     margin: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height / 5),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white30,
+                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                    ),
                     child: Image.asset("assets/images/choixpeau2_removebg.png",
                         width: MediaQuery.of(context).size.width / 2),
                   ),
                   Container(
                       margin: EdgeInsets.only(
                           top: MediaQuery.of(context).size.height / 2.2),
-                      width: MediaQuery.of(context).size.width / 2,
+                      width: MediaQuery.of(context).size.width / 1.8,
                       child: ElevatedButton(
                         onPressed: () {
                           setState(() {
